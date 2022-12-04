@@ -1,0 +1,10 @@
+.question {
+  width: 100%;
+  max-width: 625px;
+  @media (max-width: 920px) {
+    max-width: 100%;
+  }
+  @media (max-width: 380px) {
+    padding: 0 15px;
+  }
+}

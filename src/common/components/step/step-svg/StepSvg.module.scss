@@ -1,0 +1,12 @@
+@import 'src/styles/variables';
+
+.step-svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  path {
+    stroke: $orange-300;
+  }
+}

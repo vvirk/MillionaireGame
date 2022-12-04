@@ -1,0 +1,89 @@
+@import 'src/styles/variables';
+
+.variant {
+  position: relative;
+  cursor: pointer;
+  color: $black-400;
+  width: 100%;
+  max-width: 372px;
+  min-height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: calc(50% - .5px);
+    display: flex;
+    width: 17px;
+    height: 1px;
+    background: $black-300;
+  }
+  &:before {
+    right: 100%;
+  }
+  &:after {
+    left: 100%;
+  }
+  &:hover:not(.correct, .wrong) {
+    &:before,&:after {
+      background: $orange-300;
+    }
+    path {
+      stroke: $orange-300;
+    }
+  }
+  &:active:not(.correct, .wrong) {
+    path {
+      fill: $orange-100;
+      stroke: $orange-300;
+    }
+  }
+  &-letter {
+    font-weight: 600;
+    color: $orange-300;
+    text-transform: capitalize;
+  }
+  &-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  @media (max-width: 580px) {
+    max-width: 288px;
+    min-height: 56px;
+  }
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  padding: 0 24.5px;
+  display: flex;
+  gap: 10px;
+  z-index: 1;
+}
+.correct {
+  &:before,&:after {
+    background: $green-300;
+  }
+  path {
+    fill: $green-100;
+    stroke: $green-300;
+  }
+}
+
+.wrong {
+  &:before,&:after {
+    background: $red-300;
+  }
+  path {
+    fill: $red-100;
+    stroke: $red-300;
+  }
+}

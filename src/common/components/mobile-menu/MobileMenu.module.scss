@@ -1,0 +1,32 @@
+@import "src/styles/variables";
+
+.menu {
+  display: none;
+  @media (max-width: 920px) {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    &-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 2;
+      background: $black-100;
+    }
+    &-content {
+      padding: 64px 20px 32px 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}

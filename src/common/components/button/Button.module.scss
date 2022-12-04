@@ -1,0 +1,27 @@
+@import 'src/styles/variables';
+
+.button {
+  width: 100%;
+  max-width: 296px;
+  color: #fff;
+  background: $orange-300;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  &:hover {
+    transition: .33s ease-in;
+    background: $orange-200;
+  }
+  &:active {
+    transition: .33s ease-in;
+    background: $orange-400;
+  }
+  @media (max-width: 420px) {
+    max-width: 288px;
+  }
+}

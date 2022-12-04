@@ -1,0 +1,21 @@
+.answers {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-height: 176px;
+  max-width: 842px;
+  flex-wrap: wrap;
+  gap: 32px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  @media (max-width: 1320px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    max-height: 385px;
+  }
+  @media (max-width: 675px) {
+    align-items: center;
+    gap: 15px;
+    max-height: 285px;
+  }
+}
