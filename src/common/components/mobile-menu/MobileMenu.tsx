@@ -3,7 +3,10 @@ import styles from './MobileMenu.module.scss';
 import close from '../../../assets/close.png';
 import burger from '../../../assets/burger.png';
 
-const MobileMenu = () => {
+type Props = {
+  children: JSX.Element;
+}
+const MobileMenu = ({ children }: Props) => {
   const [isMenuOpen, setOpenMenu] = useState(false);
   return(
     <div className={styles.menu}>
@@ -21,7 +24,7 @@ const MobileMenu = () => {
             src={close}
             alt="close button"
           />
-          ...
+          {children}
         </div>
       </div>}
     </div>

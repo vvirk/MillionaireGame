@@ -40,6 +40,21 @@
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+  @media (max-width: 480px) {
+    &-mob {
+      max-height: 32px;
+      &:before {
+        left: -45px;
+      }
+      &:after {
+        right: -45px;
+      }
+    }
+    &-mob &-text {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
 }
 .content {
   width: 100%;

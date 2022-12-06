@@ -68,7 +68,9 @@
   gap: 10px;
   z-index: 1;
 }
-.correct {
+
+.right {
+
   &:before,&:after {
     background: $green-300;
   }
